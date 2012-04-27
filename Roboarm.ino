@@ -205,6 +205,7 @@ void drive_joints() {
   // send current data serially
   Serial.print(  millis() );
   Serial.print(',');
+  /*
   Serial.print(elbowAngle);
   Serial.print(',');
   Serial.print(shoulderAngle);
@@ -213,11 +214,12 @@ void drive_joints() {
   Serial.print(',');
   Serial.print(pwmShoulder);
   Serial.print(',');
-  Serial.print(elbow_sensor.getCurrent()-2.5, BIN);
+  */
+  Serial.print(elbow_sensor.getCurrent(), BIN);
   Serial.print(',');
   Serial.print(elbow_sensor.getVoltage(), BIN);
   Serial.print(',');
-  Serial.print(shoulder_sensor.getCurrent()-2.5, BIN);
+  Serial.print(shoulder_sensor.getCurrent(), BIN);
   Serial.print(',');
   Serial.println(shoulder_sensor.getVoltage(), BIN);
   
